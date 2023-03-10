@@ -1,0 +1,41 @@
+<div class='image'>
+    <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+      <div fxLayout="column" fxLayoutAlign="center center" class="form-container">
+        <h1 class="text-center">Welcome To My Website</h1>
+        <mat-card class="card">
+          <mat-tab-group backgroundColor="accent" class="tab-group">
+            
+            <mat-tab label="Sign in">
+              <mat-toolbar color="primary" class="toolbar">Enter your login information</mat-toolbar>
+              <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+                <mat-form-field class="form-field">
+                  <input matInput type="text" name="usrnme" placeholder="Username" [(ngModel)]="loginObj.userName">
+                </mat-form-field> 
+                <mat-form-field class="form-field">
+                  <input matInput type="password" name="psswrd" placeholder="Password" [(ngModel)]="loginObj.password">
+                </mat-form-field>
+                <button mat-raised-button type="Submit" class="submit-button" color="primary" (click)="onLogin()" routerLink="Taxes">Login</button>
+              </form>
+            </mat-tab>
+            
+            <mat-tab label="Sign Up">
+              <mat-toolbar color="primary" class="toolbar">Enter your signup information</mat-toolbar>
+              <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+                <mat-form-field class="form-field">
+                  <input matInput type="email" name="email" placeholder="Email" [(ngModel)]="signupObj.email">
+                </mat-form-field> 
+                <mat-form-field class="form-field">
+                  <input matInput type="text" name="txt" placeholder="Username" [(ngModel)]="signupObj.userName">
+                </mat-form-field>
+                <mat-form-field class="form-field">
+                  <input matInput type="password" name="pswd" placeholder="Password" [(ngModel)]="signupObj.password">
+                </mat-form-field> 
+                <button mat-raised-button type="Submit" class="submit-button" color="primary" (click)="onSignUp()">Sign up</button>
+              </form>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  
